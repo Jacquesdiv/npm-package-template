@@ -1,6 +1,4 @@
-import { Services } from '../services';
-
-const application = Services.instance().getApplicationService();
+import { application } from '..';
 
 test('Example Text', async () => {
   try {
