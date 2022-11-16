@@ -1,0 +1,42 @@
+{
+  "name": "npm-package-template",
+  "version": "0.0.1",
+  "description": "The ",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "private": false,
+  "scripts": {
+    "build": "tsc",
+    "test": "jest --config jestconfig.json",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "eslint . --ext .ts --fix",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
+    "publish": "npm publish --access public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jacquesdiv/npm-package-template.git"
+  },
+  "keywords": [],
+  "author": "Jacques de Villiers",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Jacquesdiv/npm-package-template/issues"
+  },
+  "homepage": "https://github.com/Jacquesdiv/npm-package-template#readme",
+  "devDependencies": {
+    "@types/jest": "^29.2.3",
+    "@typescript-eslint/eslint-plugin": "^5.43.0",
+    "@typescript-eslint/parser": "^5.43.0",
+    "eslint": "^8.27.0",
+    "jest": "^29.3.1",
+    "ts-jest": "^29.0.3",
+    "typescript": "^4.8.4"
+  },
+  "files": [
+    "dist/**/*"
+  ],
+  "dependencies": {}
+}
